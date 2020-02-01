@@ -1,18 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel='stylesheet' type='text/css' href='./styles.css'/>
-    <script src= './templates/script.js'></script>
+  <meta charset="utf-8">
+  <title>RDG</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css" / <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src = "./script.js"></script>
+
 </head>
+
 <body>
-    <form onSubmit='formSubmit();'>
-        Food:<br>
-        <input type="text" name="food"><br>
-        Location:<br>
-        <input type="text" name="location"> <br>
-        <input type="submit" value="Submit" onClick='formSubmit(event,food,location);'>
-    </form>
+
+  <div class="frontpage">
+
+    <!-- Page Title -->
+    <h1 class="frontpageHeading">PORTAL</h1>
+
+    <!-- Location Input -->
+    <div>
+      <label></label>
+      <input class="location" id = "location" placeholder="Location" required type="text" name='location' value='' /><br>
+    </div>
+
+    <!-- Category Dropdowns -->
+    <div class="container">
+      <div class="row">
+        <div class="category col-sm-4 .ml-md-auto">
+          <select class="form-control"  id = "category1">
+            <option>Category...</option>
+            <option>Restaurant</option>
+            <option>Museum</option>
+            <option>Dessert</option>
+          </select>
+        </div>
+
+        <div class="category col-sm-4 .ml-md-auto">
+          <select class="form-control" id = "category2">
+            <option>Category...</option>
+            <option>Restaurant</option>
+            <option>Museum</option>
+            <option>Dessert</option>
+          </select>
+        </div>
+
+        <div class="category col-sm-4 .ml-md-auto">
+          <select class="form-control" id = "category3">
+            <option>Category...</option>
+            <option>Restaurant</option>
+            <option>Museum</option>
+            <option>Dessert</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Star Filters -->
+        <!-- todo: keep chosen button dark after press -->
+    <div  class = "container">
+      <div class = "row">
+        <div class="btn-group col-sm-4" id= "rating1" role="group" aria-label="First group">
+          <button onclick="setRating1(1)" type="button" class="btn btn-outline-danger">1</button>
+          <button onclick="setRating1(2)" type="button" class="btn btn-outline-danger">2</button>
+          <button onclick="setRating1(3)" type="button" class="btn btn-outline-danger">3</button>
+          <button onclick="setRating1(4)" type="button" class="btn btn-outline-danger">4</button>
+          <button onclick="setRating1(5)" type="button" class="btn btn-outline-danger">5</button>
+        </div>
+
+        <div class="btn-group col-sm-4" id = "rating2" role="group" aria-label="Second group">
+          <button onclick="setRating2(1)" type="button" class="btn btn-outline-danger">1</button>
+          <button onclick="setRating2(2)" type="button" class="btn btn-outline-danger">2</button>
+          <button onclick="setRating2(3)" type="button" class="btn btn-outline-danger">3</button>
+          <button onclick="setRating2(4)" type="button" class="btn btn-outline-danger">4</button>
+          <button onclick="setRating2(5)" type="button" class="btn btn-outline-danger">5</button>
+        </div>
+
+        <div class="btn-group col-sm-4"  id = "rating3" role="group" aria-label="Third group">
+          <button onclick="setRating3(1)" type="button" class="btn btn-outline-danger">1</button>
+          <button onclick="setRating3(2)" type="button" class="btn btn-outline-danger">2</button>
+          <button onclick="setRating3(3)" type="button" class="btn btn-outline-danger">3</button>
+          <button onclick="setRating3(4)" type="button" class="btn btn-outline-danger">4</button>
+          <button onclick="setRating3(5)" type="button" class="btn btn-outline-danger">5</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing Filters -->
+          <!-- todo: change btn shape to Stars, -->
+          <!-- - - - make smaller button sizes  -->
+          <!-- - - - keep chosen button dark after press -->
+          <!-- - - - all while keeping centered -->
+    <div class = "container">
+      <div class = "row">
+        <div class="btn-group col-sm-4" id = "price1" role="group" aria-label="First group">
+          <button onclick = "setPrice1('$')" type="button" class="btn btn-outline-danger">$</button>
+          <button onclick = "setPrice1('$$')" type="button" class="btn btn-outline-danger">$$</button>
+          <button onclick = "setPrice1('$$$')" type="button" class="btn btn-outline-danger">$$$</button>
+          <button onclick = "setPrice1('$$$$')" type="button" class="btn btn-outline-danger">$$$$</button>
+        </div>
+
+        <div class="btn-group col-sm-4" id = "price2" role="group" aria-label="Second group">
+          <button onclick = "setPrice2('$')" type="button" class="btn btn-outline-danger">$</button>
+          <button onclick = "setPrice2('$$')" type="button" class="btn btn-outline-danger">$$</button>
+          <button onclick = "setPrice2('$$$')" type="button" class="btn btn-outline-danger">$$$</button>
+          <button onclick = "setPrice2('$$$$')" type="button" class="btn btn-outline-danger">$$$$</button>
+        </div>
+
+        <div class="btn-group col-sm-4" id = "price3" role="group" aria-label="Third group">
+          <button onclick = "setPrice3('$')" type="button" class="btn btn-outline-danger">$</button>
+          <button onclick = "setPrice3('$$')" type="button" class="btn btn-outline-danger">$$</button>
+          <button onclick = "setPrice3('$$$')" type="button" class="btn btn-outline-danger">$$$</button>
+          <button onclick = "setPrice3('$$$$')" type="button" class="btn btn-outline-danger">$$$$</button>
+        </div>
+      </div>
+    </div>
+
+      <input class="submit btn btn-danger" type="submit" onclick = "submit()" value="Submit">
+
+  </div>
+
+
+
+
+</body>
+
+</html>
