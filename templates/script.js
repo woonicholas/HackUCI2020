@@ -1,9 +1,9 @@
 
 async function formSubmit(event, food, location){
-    console.log(String(food));
+    console.log(food.value);
     event.preventDefault();
     let proxy_url = "https://cors-anywhere.herokuapp.com/";
-    let url = `https://api.yelp.com/v3/businesses/search?term={$food}&location={$location}`;
+    let url = `https://api.yelp.com/v3/businesses/search?term=${food.value}&location=${location.value}`;
     let response = await fetch (proxy_url + url,{
         method: 'GET',
         withCredentials: true,
@@ -13,4 +13,5 @@ async function formSubmit(event, food, location){
     });
     console.log(response);
     let result = await response.json();
-    console.log(result);    
+    console.log(result); 
+} 
