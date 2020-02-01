@@ -1,0 +1,31 @@
+/*TAG SELECTORS*/
+body{
+    background-color: #a9fffd
+}
+p{
+    display: inline-block;
+}
+img{
+    border-radius: 50%;
+    padding-left: 48px;
+    padding-right: 48px;
+}
+/*CLASS SELECTORS*/
+.frontpage{
+    text-align: center;
+}
+
+.separate{
+    display: inline-block;
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+.frontpageHeading{
+    color: black;
+    display: inline;
+    font-family: 'Faster One', cursive;
+    font-size: 5em;
+    position: relative;
+    top: 20px;
+}
