@@ -1,0 +1,51 @@
+/*TAG SELECTORS*/
+body{
+  background-color: #a9fffd;
+}
+
+button{
+  display: inline-block;
+}
+/*CLASS SELECTORS*/
+.btn-group{
+  justify-content: center;
+
+}
+.category{
+ padding: 0 50px;
+}
+
+.location{
+  margin-top: 150px;
+  border-color: red;
+  width: 400px;
+}
+
+.frontpage{
+  text-align: center;
+}
+
+.frontpageHeading{
+  color: black;
+  display: inline;
+  font-family: 'Sigmar One', cursive;
+  font-size: 5em;
+  position: relative;
+  top: 40px;
+}
+
+.pricing{
+  margin-left: 12em;
+  margin-right: 12em;
+}
+
+.row{
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.submit{
+  position: relative;
+  margin-top: 7em;
+}
+/*ID SELECTORS*/
