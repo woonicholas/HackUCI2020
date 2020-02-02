@@ -20,6 +20,6 @@ async function formSubmit(event, food, location){
 //parse JSON code
 function selectLocation(result){
     console.log(result.businesses[0]);
-    document.getElementById('1').innerHTML = result.businesses[0].name;
-    document.getElementById('pic1').src = result.businesses[0].image_url;
+    document.getElementById('2').innerHTML = result.businesses[0].name;
+    document.getElementById('2').src = result.businesses[0].image_url;
 }
