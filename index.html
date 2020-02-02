@@ -70,21 +70,21 @@
           <!-- - - - all while keeping centered -->
     <div class = "container">
       <div class = "row">
-        <div class="btn-group col-sm-4" id = "price1" role="group" aria-label="First group">
+        <div class="btn-group btn-group-toggle col-sm-4" data-toggle= "buttons" id = "price1" role="group" aria-label="First group">
           <button onclick = "setPrice1(1)" type="button" class="btn btn-outline-danger">$</button>
           <button onclick = "setPrice1(2)" type="button" class="btn btn-outline-danger">$$</button>
           <button onclick = "setPrice1(3)" type="button" class="btn btn-outline-danger">$$$</button>
           <button onclick = "setPrice1(4)" type="button" class="btn btn-outline-danger">$$$$</button>
         </div>
 
-        <div class="btn-group col-sm-4" id = "price2" role="group" aria-label="Second group">
+        <div class="btn-group btn-group-toggle col-sm-4" data-toggle= "buttons" id = "price2" role="group" aria-label="Second group">
           <button onclick = "setPrice2(1)" type="button" class="btn btn-outline-danger">$</button>
           <button onclick = "setPrice2(2)" type="button" class="btn btn-outline-danger">$$</button>
           <button onclick = "setPrice2(3)" type="button" class="btn btn-outline-danger">$$$</button>
           <button onclick = "setPrice2(4)" type="button" class="btn btn-outline-danger">$$$$</button>
         </div>
 
-        <div class="btn-group col-sm-4" id = "price3" role="group" aria-label="Third group">
+        <div class="btn-group btn-group-toggle col-sm-4" data-toggle= "buttons" id = "price3" role="group" aria-label="Third group">
           <button onclick = "setPrice3(1)" type="button" class="btn btn-outline-danger">$</button>
           <button onclick = "setPrice3(2)" type="button" class="btn btn-outline-danger">$$</button>
           <button onclick = "setPrice3(3)" type="button" class="btn btn-outline-danger">$$$</button>
@@ -92,8 +92,11 @@
         </div>
       </div>
     </div>
+
+    <input class = "submit btn btn-danger" type = "submit" onclick = "submit(event);" value = "submit">
+
   </div>
-  <a class = "btn btn-primary" onclick = "submit(event);">
+
 
 
 
