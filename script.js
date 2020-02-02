@@ -5,6 +5,7 @@ let price3 = -1;
 
 //Submit an Array
 function submit(event){
+  event.preventDefault();
   loc = document.getElementById("location").value;
 
   cat1 = document.getElementById("category1").value;
@@ -17,19 +18,13 @@ function submit(event){
   var searchFor3 = {location: loc, categories: cat3, price: price3};
 
   var searches  = [searchFor1, searchFor2, searchFor3];
-  sessionStorage["test"] = "big sad";
   var i = 0;
   for (i = 0; i < searches.length; i++){
     formSubmit(event, i, searches[i].categories, searches[i].location, searches[i].price);
     
   }
-  /*var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", "./test.html", false);
-  xmlhttp.send();
-  return xmlhttp.loa;*/
   
   window.location.href = "./test.html";
-  console.log(searches);
 }
 
 //Pricing Functions 1-3
@@ -66,7 +61,7 @@ function selectLocation(count, result){
   //document.getElementById(count).innerHTML += result.businesses[0].name;
   //document.getElementById("pic" + count).src = result.businesses[0].image_url;
   sessionStorage.setItem("location" + count, JSON.stringify(result));
-  sessionStorage.setItem("img" + count, JSON.stringify(result.business[0].image_url));
+  sessionStorage.setItem("img" + count, JSON.stringify(result.businesses[0].image_url));
   console.log("works?");
   console.log(sessionStorage.getItem("location" + count));
 }
