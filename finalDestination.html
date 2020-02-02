@@ -10,11 +10,9 @@
         <link rel="stylesheet" href="cardFlip.css">
         <link rel="stylesheet" href="RDG-CSS.css">
     </head>
-    <style>
+    <script src = "./script.js"></script>
 
-    </style>
-
-    <body>
+    <body onload = "load_vals();">
 
         <!-- set title/name to same font as Wesley-->
         <div class="frontpage">
@@ -28,14 +26,14 @@
                     <div class="card card-flip">
                         <div class="card-front text-white bg-dark">
                             <div class="card-body">
-                                <img class="card-img" src="https://media1.s-nbcnews.com/j/newscms/2015_40/796316/latteartheart-11-150929_914922addd38cf8005844d478cd8f4ea.fit-560w.jpg">
+                                <img class="card-img" id="img-0" src="">
                             </div>
                         </div>
                         <div class="card-back bg-dark">
                             <div class="card-body">
-                                <h3 class="card-title">Location #1</h3>
-                                <p class="card-text">Suprise this one has more more more more content on the back!</p>
-                                <a href="#" class="btn btn-outline-secondary">Action</a>
+                                <h3 class="card-title" id='loc-title-0'>Location #1</h3>
+                                <p class="card-text" id='loc-desc-0'>Suprise this one has more more more more content on the back!</p>
+                                <a href="#" class="btn btn-outline-secondary" id='loc-link-0'>Go To</a>
                             </div>
                         </div>
                     </div>
@@ -44,14 +42,14 @@
                     <div class="card card-flip">
                         <div class="card-front text-white bg-warning">
                             <div class="card-body">
-                                <img class="card-img" src="https://media1.s-nbcnews.com/j/newscms/2015_40/796316/latteartheart-11-150929_914922addd38cf8005844d478cd8f4ea.fit-560w.jpg">
+                                <img class="card-img" id="img-1" src="">
                             </div>
                         </div>
                         <div class="card-back bg-dark text-white">
                             <div class="card-body">
-                                <h3 class="card-title">Location #2</h3>
-                                <p class="card-text">Suprise this one has content on the back!</p>
-                                <a href="#" class="btn btn-outline-secondary">Action</a>
+                                <h3 class="card-title" id='loc-title-1'>Location #2</h3>
+                                <p class="card-text" id='loc-desc-1'>Suprise this one has content on the back!</p>
+                                <a href="#" class="btn btn-outline-secondary" id='loc-link-1'>Go To</a>
                             </div>
                         </div>
                     </div>
@@ -60,14 +58,14 @@
                     <div class="card card-flip">
                         <div class="card-front text-white bg-primary">
                             <div class="card-body">
-                                <img class="card-img" src="https://i.kym-cdn.com/entries/icons/original/000/020/078/freshavocado.jpg">
+                                <img class="card-img" id="img-2" src="">
                             </div>
                         </div>
                         <div class="card-back bg-dark">
                             <div class="card-body text-primary">
-                                <h3 class="card-title">Location #3</h3>
-                                <p class="card-text">Suprise this one has content on the back!</p>
-                                <a href="#" class="btn btn-outline-primary">Action</a>
+                                <h3 class="card-title" id='loc-title-2'>Location #3</h3>
+                                <p class="card-text" id='loc-desc-2'>Suprise this one has content on the back!</p>
+                                <a href="#" class="btn btn-outline-primary" id='loc-link-2'>Go To</a>
                             </div>
                         </div>
                     </div>

@@ -4,11 +4,11 @@ let price2 = -1;
 let price3 = -1;
 
 //Submit an Array
-function submit(event){
-  event.preventDefault();
-  loc = document.getElementById("location").value;
+async function submit(event){
+  console.log("submit");
+  let loc = document.getElementById("location").value;
 
-  cat1 = document.getElementById("category1").value;
+  let cat1 = document.getElementById("category1").value;
   var searchFor1 = {location: loc, categories: cat1, price: price1};
 
   cat2 = document.getElementById("category2").value;
@@ -18,13 +18,14 @@ function submit(event){
   var searchFor3 = {location: loc, categories: cat3, price: price3};
 
   var searches  = [searchFor1, searchFor2, searchFor3];
+
   var i = 0;
   for (i = 0; i < searches.length; i++){
-    formSubmit(event, i, searches[i].categories, searches[i].location, searches[i].price);
+    await formSubmit(event, i, searches[i].categories, searches[i].location, searches[i].price);
     
   }
-  
-  window.location.href = "./test.html";
+
+  window.location.href = "./finalDestination.html";
 }
 
 //Pricing Functions 1-3
@@ -50,27 +51,25 @@ async function formSubmit(event, count, category, location, price){
       },
   });
   let result = await response.json();
-  selectLocation(count, result);
+  await selectLocation(count, result);
   return result;
 }
 
 //parse JSON code
 function selectLocation(count, result){
-  console.log(result);
-  //console.log(result.businesses[0]);
-  //document.getElementById(count).innerHTML += result.businesses[0].name;
-  //document.getElementById("pic" + count).src = result.businesses[0].image_url;
   sessionStorage.setItem("location" + count, JSON.stringify(result));
-  sessionStorage.setItem("img" + count, JSON.stringify(result.businesses[0].image_url));
-  console.log("works?");
-  console.log(sessionStorage.getItem("location" + count));
+  sessionStorage.setItem("img" + count, result.businesses[count].image_url);
+  return result;
 }
 
 function load_vals(){
-  console.log(sessionStorage["test"]);
-  console.log(sessionStorage.getItem("location0"));
+  console.log("Loading vals..");
   var i = 0;
   for(i = 0; i < 3; i++){
-    document.getElementById(i).innerHTML = sessionStorage.getItem("location" + i);
+    console.log("img-"+i);
+    document.getElementById("loc-title-"+i).innerHTML = JSON.parse(sessionStorage.getItem("location"+i)).businesses[i].name;
+    document.getElementById("loc-desc-"+i).innerHTML = JSON.parse(sessionStorage.getItem("location"+i)).businesses[i].categories[0].title;
+    document.getElementById("loc-link-"+i).src = JSON.parse(sessionStorage.getItem("location"+i)).businesses[i].url;
+    document.getElementById("img-" + i).src = sessionStorage.getItem("img" + i);
   }
 }
