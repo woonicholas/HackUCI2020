@@ -70,7 +70,7 @@ function load_vals(){
   for(i = 0; i < 3; i++){
     document.getElementById("loc-title-"+i).innerHTML = JSON.parse(sessionStorage.getItem("location"+i)).businesses[i].name;
     document.getElementById("loc-desc-"+i).innerHTML = JSON.parse(sessionStorage.getItem("location"+i)).businesses[i].categories[0].title;
-    document.getElementById("loc-link-"+i).src = JSON.parse(sessionStorage.getItem("location"+i)).businesses[i].url;
+    document.getElementById("loc-link-"+i).href = JSON.parse(sessionStorage.getItem("location"+i)).businesses[i].url;
     document.getElementById("img-" + i).src = sessionStorage.getItem("img" + i);
   }
 }
