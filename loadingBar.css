@@ -1,18 +1,22 @@
 #myProgress {
     width: 100%;
     background-color: grey;
-  }
+}
   
-  #myBar {
+#myBar {
     width: 1%;
     height: 30px;
     background-color: green;
-  }
+}
 
-  .frontpageHeading{
+.frontpage{
+    text-align: center;
+}
+
+.frontpageHeading{
     color: black;
     display: inline;
-    font-family: 'Faster One', cursive;
+    font-family: 'Sigmar One', cursive;
     font-size: 5em;
     position: relative;
     top: 20px;

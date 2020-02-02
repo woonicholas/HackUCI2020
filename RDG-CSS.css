@@ -11,12 +11,6 @@ p{
     text-align: center;
 }
 
-.separate{
-    display: inline-block;
-    padding-left: 180px;
-    padding-right: 180px;
-}
-
 .frontpageHeading{
     color: black;
     display: inline;
@@ -24,4 +18,17 @@ p{
     font-size: 5em;
     position: relative;
     top: 20px;
+}
+
+.col-sm-4{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.card-body{
+  color: #ff80b0;
+}
+
+.card{
+  border-radius:10px;
 }

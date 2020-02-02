@@ -19,6 +19,8 @@ async function submit(event){
 
   var searches  = [searchFor1, searchFor2, searchFor3];
 
+  window.location.href="PortalLoadingBar.html";
+
   var i = 0;
   for (i = 0; i < searches.length; i++){
     await formSubmit(event, i, searches[i].categories, searches[i].location, searches[i].price);
