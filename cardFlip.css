@@ -1,6 +1,9 @@
 
 .card {
   height: 100%;
+  background-color: #a9fffd;
+  border-color: #a9fffd;
+  ;
 }
 /*
 flip card
@@ -22,11 +25,13 @@ flip card
 .card-back {
   transform: rotateY(180deg);
   position: absolute;
+  
   top: 0;
 }
 
 .card-flip:hover .card-front {
   transform: rotateY(-180deg);
+  
 }
   
 .card-flip:hover .card-back {
