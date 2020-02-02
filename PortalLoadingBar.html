@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portal</title>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Faster+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="loadingBar.css">
+    </head>
+    <style>
+    #myProgress {
+    width: 100%;
+    background-color: #ddd;
+    }
+
+    #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: #4CAF50;
+    }
+    </style>
+    <body style="background-color: #a9fffd;">
+
+    <h1 class="frontPageHeading" style="text-align: center;">Portal</h1>
+
+    <div id="myProgress">
+    <div id="myBar"></div>
+    </div>
+
+    <br>
+    <button onclick="move()">Click Me</button> 
+
+
+    <script>
+        var i = 0;
+        var width = 0;
+        function move() {
+            if (i == 0) {
+                i = 1;
+                var elem = document.getElementById("myBar");
+                var width = 1;
+                var id = setInterval(frame, 50);
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        i = 0;
+                        window.location.href="Decided_Locations.html"
+                    } else {
+                        width++;
+                        elem.style.width = width + "%";
+                    }
+                }
+            
+            }
+        }
+    </script>
+    
+    </body>
+</html>

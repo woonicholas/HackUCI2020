@@ -1,0 +1,19 @@
+#myProgress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+  }
+
+  .frontpageHeading{
+    color: black;
+    display: inline;
+    font-family: 'Faster One', cursive;
+    font-size: 5em;
+    position: relative;
+    top: 20px;
+}
