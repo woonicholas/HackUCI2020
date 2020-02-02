@@ -23,6 +23,7 @@ function submit(){
 
   var searches  = [searchFor1, searchFor2, searchFor3];
   console.log(searches);
+  window.location.href="PortalLoadingBar.html"
 }
 
 
