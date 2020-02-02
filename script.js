@@ -19,15 +19,15 @@ async function submit(event){
 
   var searches  = [searchFor1, searchFor2, searchFor3];
 
-  window.location.href="PortalLoadingBar.html";
+  
 
   var i = 0;
   for (i = 0; i < searches.length; i++){
     await formSubmit(event, i, searches[i].categories, searches[i].location, searches[i].price);
     
   }
-
-  window.location.href = "./finalDestination.html";
+  window.location.href="PortalLoadingBar.html";
+  
 }
 
 //Pricing Functions 1-3
@@ -68,7 +68,6 @@ function load_vals(){
   console.log("Loading vals..");
   var i = 0;
   for(i = 0; i < 3; i++){
-    console.log("img-"+i);
     document.getElementById("loc-title-"+i).innerHTML = JSON.parse(sessionStorage.getItem("location"+i)).businesses[i].name;
     document.getElementById("loc-desc-"+i).innerHTML = JSON.parse(sessionStorage.getItem("location"+i)).businesses[i].categories[0].title;
     document.getElementById("loc-link-"+i).src = JSON.parse(sessionStorage.getItem("location"+i)).businesses[i].url;
