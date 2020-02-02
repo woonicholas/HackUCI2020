@@ -3,11 +3,13 @@
   height: 100%;
   background-color: #a9fffd;
   border-color: #a9fffd;
-  ;
 }
-/*
-flip card
-*/
+/* flip action */
+img{
+  height:100%;
+  object-fit: cover;
+}
+
 .card-flip > div {
   backface-visibility: hidden;
   transition: transform 300ms;
@@ -16,6 +18,7 @@ flip card
   height: 100%;
   margin: 0;
   display: flex;
+  border-radius: 10px;
 }
 
 .card-front {
@@ -25,20 +28,14 @@ flip card
 .card-back {
   transform: rotateY(180deg);
   position: absolute;
-  
   top: 0;
 }
 
 .card-flip:hover .card-front {
   transform: rotateY(-180deg);
-  
-}
-  
-.card-flip:hover .card-back {
-  transform: rotateY(0deg);
+
 }
 
-img{
-  height:100%;
-  object-fit: cover;
+.card-flip:hover .card-back {
+  transform: rotateY(0deg);
 }
