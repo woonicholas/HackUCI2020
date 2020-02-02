@@ -5,11 +5,7 @@ body{
 p{
     display: inline-block;
 }
-img{
-    border-radius: 50%;
-    padding-left: 48px;
-    padding-right: 48px;
-}
+
 /*CLASS SELECTORS*/
 .frontpage{
     text-align: center;
