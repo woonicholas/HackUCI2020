@@ -18,7 +18,7 @@ p{
     color: black;
     display: inline;
     font-family: 'Faster One', cursive;
-    font-size: 5em;
+    font-size: 80px;
     position: relative;
     top: 20px;
 }
@@ -34,7 +34,7 @@ p{
 }
 
 .card-body{
-  color: #ff80b0;
+  color: #db3056;
 }
 
 .card{

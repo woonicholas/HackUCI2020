@@ -3,41 +3,30 @@
     <head>
         <title>Portal</title>
         <meta charset="UTF-8">
-        <link href="https://fonts.googleapis.com/css?family=Faster+One|Sigmar+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Faster+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="loadingBar.css">
-        <link rel = "icon" href = "favicon.ico" type = "image/x-icon"> 
+        <link rel = "icon" href = "favicon.ico" type = "image/x-icon">
     </head>
-    <style>
-    #myProgress {
-    width: 100%;
-    background-color: #ddd;
-    }
 
-    #myBar {
-    width: 1%;
-    height: 30px;
-    background-color: #4CAF50;
-    }
-
-    #middle {
-        text-align: center;
-    }
-
-    </style>
-    <body style="background-color: #a9fffd;">
-
+    <body>
         <div class="frontpage">
-            <h1 style="text-align: center;display: inline;font-family: 'Faster One', cursive;font-size: 5em; position: relative;top: 20px;">Portal</h1>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div id="myProgress">
-            <div id="myBar"></div>
+
+            <!-- Page Title -->
+            <h1 class = "frontpageHeading">PORTAL</h1>
+
+          <div class = "myProgress">
+            <div id="myProgress">
+                <div id="myBar"></div>
+            </div>
+
+            <br>
+
+            <button id="middle" onclick="move()">Find your next destination!</button>
+          </div>
+
         </div>
-        <br>
-        <button id="middle" onclick="move()">Find your next destination!</button>
-        </div>
+
+        <!-- PROGRESS BAR FUNCTION JS -->
         <script>
             var i = 0;
             var width = 0;
@@ -60,5 +49,6 @@
                 }
             }
         </script>
+
     </body>
 </html>
